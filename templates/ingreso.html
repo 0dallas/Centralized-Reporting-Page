@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en-US" dir="ltr">
+<head>
+    <title>Ingreso Reportes</title>
+    <!--INCLUIR ARCCHIVO CSS-->
+    <link rel="shortcut icon" href="{{ url_for('static', filename='logo2.ico') }}">
+    <link rel="stylesheet" href="{{url_for('static',filename='css/login.css')}}">
+    
+    <link rel="stylesheet" crossorigin="anonymous"
+	href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" >
+    
+	<script crossorigin="anonymous"
+	src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" >
+	</script>
+    
+</head>
+
+<body>
+    <div class="login-page">
+    <div class="form">
+     <form class="forma" action="" method = "POST">
+        <h1 class="titulo">Portal de Reportes</h1>
+        <div class="form-group">
+          <label class="subti" for="user">Usuario</label>
+          <input type="text" class="form-control" name="user" id="user">
+        </div>
+        <div class="form-group">
+            <label class="subti" for="password">Contraseña</label>
+            <input type="password" class="form-control" name="password" id="password">
+        <button class="btn btn-primary">Ingresar</button> 
+        <div class="encabezado">
+            <img src="{{url_for('static',filename='img/logo2.png')}}" alt="logo de la compañia">
+        </div>
+    </form>
+    </div>
+    {%for message in get_flashed_messages()%}
+    <h2 class="alerta">{{message}}</h2>
+    {% endfor%}
+    </div>
+      
+</body>

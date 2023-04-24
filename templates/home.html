@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>REPORTES</title>
+    <!--INCLUIR ARCCHIVO CSS-->
+    <link rel="stylesheet" href="{{url_for('static',filename='css/estilos.css')}}">
+</head>
+<body>
+    <div class="encabezado">
+        <img src="{{url_for('static',filename='img/logo.png')}}" alt="logo de la compañia">
+    </div>
+    <h2 class="titulo">REPORTES DE ÁREAS</h2>
+    <div class="todo">
+    <div class="iconos">
+        <div class="asistencia">
+            <a href="https://app.powerbi.com/reportEmbed?reportId=d51995be-ff1f-4d03-aea4-604de6dbf718&autoAuth=true&ctid=aadc282c-2908-4655-b0e1-2baf1d200b82"><img src="{{url_for('static',filename='img/asis1.png')}}" alt="Asistencia"></a>
+        </div>
+        <div class="pie">
+            <p>ASISTENCIA</p> 
+        </div>
+    </div>
+    <div class="iconos">
+        <div class="vacaciones">
+            <a href="https://app.powerbi.com/reportEmbed?reportId=66fec258-13c2-4912-a020-ba7a56ba0601&autoAuth=true&ctid=aadc282c-2908-4655-b0e1-2baf1d200b82"><img src="{{url_for('static',filename='img/vaca1.png')}}" alt="Vacaciones"></a>
+        </div>
+        <div class="pie">
+            <p>VACACIONES</p> 
+        </div>
+    </div>
+    <div class="iconos">
+        <div class="margenes">
+            <a href="https://app.powerbi.com/reportEmbed?reportId=9d663160-f599-466d-83ad-00afca630df4&autoAuth=true&ctid=aadc282c-2908-4655-b0e1-2baf1d200b82"><img src="{{url_for('static',filename='img/margen1.png')}}" alt="Margenes"></a>
+        </div>
+        <div class="pie">
+            <p>MÁRGENES</p> 
+        </div>
+    </div>
+    </div>
+ 
+</body>
+</html>

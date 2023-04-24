@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Menu Reportes</title>
+    <link rel="shortcut icon" href="{{ url_for('static', filename='logo2.ico') }}">
+    <link rel="stylesheet" href="{{url_for('static',filename='css/tabla.css')}}">
+
+</head>
+<!--a class="btn btn-primary" href="ingreso">Ingresar datos</a-->
+<body>
+    <div class="encabezado">
+        <img src="{{url_for('static',filename='img/logo.png')}}" alt="logo de la compañia">
+        <div class="salida">
+            <a href="http://reportes.com"><img src="{{url_for('static',filename='img/salir.png')}}" alt="salir"></a>
+        </div>
+    </div>
+    <div class="primer_titulo">
+        <h1>Bienvenid@: {{result}}</h1>
+        <p>Departamento de Gestión Estratégica/Análisis de datos</p>
+    </div>
+    <h2>Hoy es {{ fecha_actual.strftime('%d/%m/%Y') }}</h2>
+    <table class="table" cellpadding="10" cellspacing="0" border="1">
+        
+        <thead>
+            <div class="tit_fila">
+            <tr>
+            <th scope="col">REPORTES DISPONIBLES</th>
+            <th scope="col">LINK</th>
+            <th scope="col">DESCRIPCIÓN</th>
+            
+            </tr>
+            </div>
+        </thead>
+       
+        <form action="" method="POST">
+            <tbody> 
+                {% for i in db %}
+                    <tr>
+                        <td width="25%">{{ i.REPORTE }}</td>
+                        <td> <button name="ID" id="ID" value={{i.LLAVE}}> 🔗</button></td> 
+                        <td>{{ i.DESCRIPCION }}</td>
+                        
+                        
+                    </tr>
+                {% endfor %}
+            </tbody>
+        </form>
+    </table>
+    
+</body>
+</html>

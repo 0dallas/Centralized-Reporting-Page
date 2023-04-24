@@ -1,0 +1,73 @@
+body{
+    /*background-color:#c5e0b6;/*----------------- COLOR DE FONDO*/
+    /*background-color: rgb(22,81,138);*/
+    background-color: #6bb7d4;
+    
+}
+
+.encabezado{
+    display: flex;
+    align-items: center;
+    padding-top: 1%;
+    justify-content: space-between;  /*---------------ESPACIADO ENTRE LOGO Y salida--*/
+ }
+
+ .encabezado img{
+    width: 200px;
+    height: 100%;
+}  
+
+.salida img{
+    width: 50px;
+    height: 100%;
+}   
+
+.titulo{
+    display: flex;
+    color:black;
+    background-color: rgba(100, 149, 237,0%);
+    justify-content: left;
+    align-items: center;
+    font-size: 40px;
+    height: 80px;
+}
+
+div.tit_fila{
+    color:red;
+}
+
+h1{
+    color: #1f3c5a;
+}
+
+/*tttttttttttttttttttttttttttt*/
+h2{
+    color: #1f3c5a;
+}
+/*dsfsdfsdfsdfsdfdsfsd*/
+th {
+    background-color: #0f3961;
+    color: #fff;
+  }
+
+.primer_titulo{
+    display: flex;
+    justify-content: space-between;  /*---------------ESPACIADO ENTRE bienvenido Y DEP.GE--*/
+    color: black;
+ }
+
+ tr:nth-child(even) {
+    background-color: rgb(17,66,114,50%);
+    color: whitesmoke;
+  }
+
+tr:nth-child(odd) {
+    background-color: #315679;
+    color: whitesmoke;
+  }
+
+  .table{
+   /* border-collapse: collapse;*/
+   /* border: 1px solid whit;*/
+   border:none
+  }
